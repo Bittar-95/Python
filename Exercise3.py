@@ -37,14 +37,17 @@ for toupleItem in testTuple:
     
 #Q7------------------------------------------
 num_set = set([0, 1, 2, 3, 4, 5,6])
-print(num_set)
+for item in num_set:
+    print(item)
 #Q7------------------------------------------
     
     
 #Q8------------------------------------------
-num_set = set([0, 1, 2, 3, 4, 5,6])
-num_set.add(len(num_set)+1)
-print(num_set)
+num_set = {0, 1, 2, 3, 4, 5,6}
+num_set_two = {0,5,3,6,9,20,4}
+numSetInterSection = num_set & num_set_two
+print(numSetInterSection)
+print("Test")
 #Q8------------------------------------------
 
 
