@@ -1,3 +1,4 @@
+
 #Q1---------------------------------------------
 #numberOne= int(input("Please Inout Number One: "));
 #numberTwo= int(input("Please Inout Number Two: "));
@@ -13,20 +14,22 @@
 
 #Q3---------------------------------------------
     
-end = int(input("Please Enter The Number Of Lines"));
-start = 0
-increment = 1
-countre = end//2
-for line in range(start,end,increment):
-    for stars in range(line):
-        print("*", end=" ")
-        
-    if (line == countre):
-         start=line
-         end = 0
-         increment=-1
-    print("\n")
-
+            
+#end = int(input("Please Enter The Lines Number : "));
+#start = 0;
+#counter=0
+#half = end//2;
+#for lines in range(end):
+#    if((lines - counter) == half):
+#        counter = counter +1
+#        for stars in range((half - counter),0,-1):
+#            print("*" , end=" ")
+#    else:
+#        for stars in range(lines):
+#            print("*" , end=" ")
+#
+#    print("\n")
+#            
     
     
 #---------------------------------------------
@@ -76,7 +79,28 @@ for line in range(start,end,increment):
 #---------------------------------------------
 
 #Q9---------------------------------------------
-#Patterns Number Nine
+
+
+end = int(input("Enter Lines Number :"));
+counter = 0;
+start = 0;
+spaces = end//2;
+for lines in range(end):
+    if spaces <= 0:
+        for space in range(spaces , 0 ,1):
+            print(" " , end="");
+        for stars in range(end - counter):
+            print("*" , end=" ");       
+    else:
+        for space in range(spaces):
+                    print(" ",end="")
+        for stars in range(lines + 1):
+                    print("*" , end=" ")
+    spaces = spaces - 1;
+    counter = counter+1;
+    print("\n")
+    
+
     
 #---------------------------------------------
    
