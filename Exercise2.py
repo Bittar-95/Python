@@ -14,10 +14,10 @@
 
 #Q3---------------------------------------------
 
-#
+#import math;
 #end =int(input("Please Enter The Lines Number : "));
 #counter=0
-#half = end//2;
+#half =math.ceil(end//2);
 #for lines in range(end):
 #    if((lines - counter) == half):
 #        counter = counter +1
@@ -95,9 +95,9 @@
 #    spaces = spaces - 1;
 #    counter = counter+1;
 #    print("\n")
-    
-
-    
+#    
+#
+#    
 #---------------------------------------------
    
 #Q10---------------------------------------------
