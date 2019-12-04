@@ -421,32 +421,39 @@ def viewEmployee():
 
 def viewdeletewindowEmployee():
     def delete():
+        find=True
         for i,v in enumerate(employee_list):
             if(v.employee_number == int(user_number.get())):
                 employee_list.pop(i)
+                find=False
                 
-
-
-            
+        if find:
+            messagebox.showerror("Error","Can't Find The Student")
+   
     viewchild = Toplevel(root)
-    
-    
+    viewchild.geometry("200x150+800+415")
     user_number=StringVar()
-    entryID = Entry(viewchild,textvariable=user_number).place(x=50,y=20)
-    btn=Button(viewchild, text="Delete",command=delete).place(x=100,y=40)
+    entryID = Entry(viewchild,textvariable=user_number).place(x=20,y=20)
+    btn=Button(viewchild, text="Delete",command=delete).place(x=20,y=40)
         
 
 
 def viewdeletewindowStudents():
     def delete():
+        find=True
         for i,v in enumerate(students_list):
             if(v.student_number == int(user_number.get())):
                 students_list.pop(i)
-                
+                find=False
+         
+        if find:
+            messagebox.showerror("Error","Can't Find The Student")
+            
     viewchild = Toplevel(root)
+    viewchild.geometry("200x150+800+415")
     user_number=StringVar()
-    entryID = Entry(viewchild,textvariable=user_number).place(x=50,y=20)
-    btn=Button(viewchild, text="Delete",command=delete).place(x=100,y=40)
+    entryID = Entry(viewchild,textvariable=user_number).place(x=20,y=20)
+    btn=Button(viewchild, text="Delete",command=delete).place(x=20,y=40)
             
           
 
