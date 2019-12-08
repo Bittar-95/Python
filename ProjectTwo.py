@@ -421,13 +421,13 @@ def viewEmployee():
 
 def viewdeletewindowEmployee():
     def delete():
-        find=True
+        notfind=True
         for i,v in enumerate(employee_list):
             if(v.employee_number == int(user_number.get())):
                 employee_list.pop(i)
-                find=False
+                notfind=False
                 
-        if find:
+        if notfind:
             messagebox.showerror("Error","Can't Find The Student")
    
     viewchild = Toplevel(root)
@@ -440,13 +440,13 @@ def viewdeletewindowEmployee():
 
 def viewdeletewindowStudents():
     def delete():
-        find=True
+        notfind=True
         for i,v in enumerate(students_list):
             if(v.student_number == int(user_number.get())):
                 students_list.pop(i)
-                find=False
+                notfind=False
          
-        if find:
+        if notfind:
             messagebox.showerror("Error","Can't Find The Student")
             
     viewchild = Toplevel(root)
